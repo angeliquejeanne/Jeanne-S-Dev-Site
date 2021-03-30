@@ -1,0 +1,90 @@
+body {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.titre-contact {
+  margin: 50px 0 20px;
+  text-align: center;
+  font-size: 60px;
+  color: #000;
+}
+.contact-sous-titre {
+  font-weight: lighter;
+  text-align: center;
+  margin: 10px 0 70px;
+}
+.trois-contacts {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.trois-contacts .box:nth-child(1) span, .trois-contacts .box:nth-child(2) span {
+  border-bottom: 3px dotted red;
+}
+.trois-contacts .box:nth-child(3) span {
+  cursor: pointer;
+  border-bottom: 3px solid red;
+}
+.box {
+  width: 200px;
+  text-align: center;
+}
+.box span {
+  font-size: 20px;
+}
+.box img {
+  display: block;
+  margin: 0 auto 10px;
+  width: 70px;
+}
+
+/* formulaire */
+
+.title {
+  width: 900px;
+  margin: 100px auto 50px;
+  box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 5px;
+}
+.title h2 {
+  text-align: center;
+  font-size: 40px;
+  margin: 10px 0 20px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .titre-contact {
+    margin: 30px 0 20px;
+    font-size: 40px;
+  }
+  .contact-sous-titre {
+    margin: 0 20px 20px;
+    font-size: 16px;
+  }
+  .trois-contacts {
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .box {
+    margin: 20px 0;
+  }
+  .box img {
+    width: 50px;
+  }
+  .title {
+    width: 90%;
+    margin: 80px auto 50px;
+  }
+  .title  h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 10px 0 30px;
+  }
+}
