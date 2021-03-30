@@ -59,8 +59,8 @@ body {
 
 @media screen and (max-width: 800px) {
   .titre-contact {
-    margin: 30px 0 20px;
-    font-size: 40px;
+    margin: 30px 0 10px;
+    font-size: 37px;
   }
   .contact-sous-titre {
     margin: 0 20px 20px;
