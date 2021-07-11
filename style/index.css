@@ -1,11 +1,15 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
+
+/* reset */
 *, ::before, ::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 body {
     height: 100vh;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Cinzel Decorative', cursive;
+    background-color: #fff;
 }
 .grille-accueil {
     width: 100%;
@@ -14,26 +18,28 @@ body {
     grid-template: 70px 500px minmax(300px,1fr) / 600px 1fr 600px;
 }
 
-
+/* Menu section start */
 .menu {
     grid-area: 1 / 1 / 2 / -1;
-    /* background: black; */
     width: 100%;
-    height: 70px;
+    height: 80px;
+    font-family: 'Cinzel Decorative', cursive;
+    z-index: 1000;
 }
 .titre-menu {
+    margin-top: 0px;
     background: snow;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 35px;
-    height: 70px;
+    height: 80px;
     position: relative;
     z-index: 200;
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid #F0DA5D;
 }
 .menu:hover > .titre-menu {
-    border-bottom: 0px solid red;
+    border-bottom: 3px solid #F0DA5D;
 }
 .titre-menu::after {
     content: '';
@@ -48,13 +54,13 @@ body {
     background: snow;
     position: relative;
     z-index: 100;
-    top: -280px;
+    top: -580px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     list-style-type: none;
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid #F0DA5D;
 }
 .titre-menu:hover + .liste-menu {
     transition: top 0.2s ease-in-out;
@@ -66,16 +72,17 @@ body {
 .liste-menu li {
     margin: 10px 0;
 }
-.liste-menu a, .contact span {
+.liste-menu li a, .contact span {
     text-decoration: none;
     font-size: 22px;
     color: black;
     position: relative;
+
 }
 .liste-menu .slide-line {
     font-size: 50px;
     text-decoration: none;
-    color: red;
+    color: #F0DA5D;
     position: relative;
 }
 .liste-menu .slide-line::after {
@@ -85,7 +92,7 @@ body {
     bottom: -2px;
     width: 100%;
     height: 2px;
-    background: red;
+    background: #F0DA5D;
     transform-origin: 100% 0;
     transform: scaleX(0);
     transition: transform 0.4s;
@@ -94,11 +101,11 @@ body {
     transform-origin: 0 0;
     transform: scaleX(1);
 }
-
-
+/* Menu section end */
+/* Presentation section */
 .presentation {
     grid-area: 2 / 1 / 3 / 2;
-    background: lightgrey;
+    background: #fff;
     padding: 40px;
 }
 .presentation img {
@@ -112,12 +119,13 @@ body {
     font-size: 20px;
     margin-top: 20px;
     line-height: 1.3;
+    font-family: 'Lateef', cursive;
 }
 .presentation a {
     padding: 15px;
     text-decoration: none;
     color: black;
-    border: 3px solid red;
+    border: 3px solid #F0DA5D;
     border-radius: 5px;
     font-size: 20px;
     margin-top: 20px;
@@ -127,16 +135,15 @@ body {
     text-align: center;
 }
 .presentation a:hover {
-    color: snow;
-    background-color: black;
+    color: #fff;
+    background-color: #F0DA5D;
 }
-
-
+/* Presentation section end */
+/* Slider section start */
 .slider {
     grid-area: 2 / 2 / 3 / -1;
     position: relative;
 }
-
 .container-slides {
     width: 100%;
     height: 100%;
@@ -148,11 +155,14 @@ body {
     top: 0px;
     opacity: 0;
     width: 100%;
-    height: 500px;
-    object-fit: cover;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
     display: block;
     transition: opacity 0.6s ease-in-out;
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
 }
 img.active {
     opacity: 1;
@@ -176,25 +186,25 @@ img.active {
     width: 50px;
     height: 50px;
     color: black;
-    background: snow;
-    border: 3px solid red;
+    background: #fff;
+    border: 3px solid #F0DA5D;
 }
 .btn-nav:hover {
-    background: red;
-    border: 3px solid black;
+    background: #F0DA5D;
+    border: 3px solid #fff;
 }
 .btn-nav img {
     width: 20px;
     height: 20px;
 }
-
-
+/* Slider section end */
+/* Choice section start */
 .choix {
     grid-area: 3 / 1 / 4 / 3;
-    background: black;
-    color: snow;
-    border: 3px solid red;
-    border-bottom: none;
+    background: #F0DA5D;
+    color: #fff;
+    border: 4px solid black;
+    /* border-bottom: none; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,13 +213,13 @@ img.active {
 }
 .titre-choix {
     text-align: center;
-    font-size: 50px;
+    font-size: 4rem;
     margin-bottom: 20px;
-    font-family:'Times New Roman', Times, serif;
 }
 .choix p {
-    font-size: 20px;
+    font-size: 2.2rem;
     line-height: 1.4;
+    font-family: 'Lateef', cursive;
 }
 .go-galerie {
     font-size: 22px;
@@ -218,11 +228,11 @@ img.active {
     width: 300px;
     padding: 20px;
     text-decoration: none;
-    border: 3px solid red;
+    border: 3px solid #000;
     text-align: center;
     border-radius: 5px;
-    background: black;
-    color: snow;
+    background: #F0DA5D;
+    color: #fff;
 }
 .go-galerie:hover {
     transition: all 0.2s ease-in-out;
@@ -240,38 +250,36 @@ img.active {
     margin: 10px 0;
     width: 60px;
     height: 60px;
-    border: 3px solid red;
+    border: 3px solid #000;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .media:hover {
-    background-color: red;
-    border: 3px solid snow;
+    background-color: #000;
+    border: 3px solid #fff;
 }
 .media img {
     width: 25px;
 }
-
-
+/* Choice section end */
+/* Contact section start */
 .contact {
     grid-area: 3 / 3 / 4 / 4;
-    background: lightgrey;
-    color: black;
+    color: #000;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .contact h3{
-    font-size: 70px;
+    font-size: 4.5rem;
     padding-left: 50px;
-    font-family: 'Times New Roman', Times, serif;
 }
 .contact span {
-    font-size: 70px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 4.5rem;
+    font-family: 'Cinzel Decorative', cursive;
 }
 .contact span::after {
     content: '';
@@ -280,7 +288,7 @@ img.active {
     bottom: -2px;
     width: 100%;
     height: 2px;
-    background: red;
+    background: #F0DA5D;
     transform: scale(0);
     transition: transform 0.2s ease-in-out;
 }
@@ -293,31 +301,30 @@ img.active {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    border: 3px solid red;
-    background-color: snow;
+    border: 3px solid #F0DA5D;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.2s ease-in-out;
 }
 .go-contact:hover {
-    border: 3px solid black;
-    background-color: red;
+    border: 3px solid #000;
+    background-color: #F0DA5D;
 }
 .go-contact:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .go-contact img {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
 }
-
-
+/* Contact section end */
+/* Footer section start */
 footer {
-    border-top: 3px solid red;
     text-align: center;
     padding: 10px;
     margin-top: auto;
+    font-size: 1.2rem;
 }
 
 
